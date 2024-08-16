@@ -1,3 +1,5 @@
 /public/*
 !/public/assets/
-!/public/logo.jpeg
+!/public/*.jpeg
+!/public/*.jpg
+!/public/*.png
