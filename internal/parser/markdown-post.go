@@ -11,8 +11,8 @@ import (
 	md "github.com/gomarkdown/markdown"
 	mdparser "github.com/gomarkdown/markdown/parser"
 	striphtml "github.com/grokify/html-strip-tags-go"
-	"github.com/nathan-fiscaletti/md-blog/internal/datatypes"
-	"github.com/nathan-fiscaletti/md-blog/internal/util"
+	"github.com/nathan-fiscaletti/cucine-povere/internal/datatypes"
+	"github.com/nathan-fiscaletti/cucine-povere/internal/util"
 	stripmd "github.com/writeas/go-strip-markdown"
 )
 

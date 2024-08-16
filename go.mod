@@ -1,4 +1,4 @@
-module github.com/nathan-fiscaletti/md-blog
+module github.com/nathan-fiscaletti/cucine-povere
 
 go 1.22.1
 

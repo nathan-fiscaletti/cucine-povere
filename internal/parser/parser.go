@@ -4,7 +4,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/nathan-fiscaletti/md-blog/internal/datatypes"
+	"github.com/nathan-fiscaletti/cucine-povere/internal/datatypes"
 	"gopkg.in/yaml.v2"
 )
 

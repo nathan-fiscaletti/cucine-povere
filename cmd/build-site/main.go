@@ -3,9 +3,9 @@ package main
 import (
 	"fmt"
 
-	"github.com/nathan-fiscaletti/md-blog/internal/datatypes"
-	"github.com/nathan-fiscaletti/md-blog/internal/generator"
-	"github.com/nathan-fiscaletti/md-blog/internal/parser"
+	"github.com/nathan-fiscaletti/cucine-povere/internal/datatypes"
+	"github.com/nathan-fiscaletti/cucine-povere/internal/generator"
+	"github.com/nathan-fiscaletti/cucine-povere/internal/parser"
 )
 
 type PostPage struct {
