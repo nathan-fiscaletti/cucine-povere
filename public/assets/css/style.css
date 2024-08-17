@@ -4,17 +4,37 @@
     background-color: #d2cab8;
 }
 
-.site-title {
+.page-header {
     margin-top: 32px;
     margin-bottom: 32px;
     text-align: center;
 }
 
-.site-title a:hover {
+.logo-link {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 767px) {
+    .page-header {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    .site-title-link {
+        display: none;
+    }
+}
+
+.site-title-link {
     text-decoration: none;
 }
 
-.site-title h1 {
+.site-title-link:hover {
+    text-decoration: none;
+}
+
+.site-title-link h1 {
     font-weight: 400 !important;
     font-family: 'Fira Sans', sans-serif;
     font-size: 60px;
@@ -76,7 +96,14 @@ pre {
 }
 
 .post-previews {
-    margin-top: 96px;
+    margin-top: 64px;
+}
+
+@media only screen and (max-width: 768px) {
+    .post-previews {
+        margin-top: 64px;
+        margin-bottom: 0px;
+    }
 }
 
 .badge-text {
@@ -90,8 +117,21 @@ pre {
     padding-top: 32px;
     padding-bottom: 8px;
     border-radius: 16px;
-    margin-bottom: 32px;
+    margin-bottom: 0px;
+    margin-top: 32px;
     transition: 200ms;
+}
+
+.post-preview-no-top-margin {
+    margin-top: 0px;
+}
+
+@media only screen and (max-width: 768px) {
+    .post-preview {
+        padding: 16px;
+        padding-top: 16px;
+        padding-bottom: 8px;
+    }
 }
 
 .post-preview:hover {

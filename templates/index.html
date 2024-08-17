@@ -8,10 +8,12 @@
     <body class="body">
         <div class="container content">
             <div class="logo-wrapper">
-                <img alt="{{.Site.Title}}" src="./logo.png" class="rounded-circle site-logo" />
+                <a href="index.html" class="logo-link">
+                    <img alt="{{.Site.Title}}" src="./logo.png" class="rounded-circle site-logo" />
+                </a>
             </div>
-            <div class="page-header site-title">
-                <a href="index.html">
+            <div class="page-header">
+                <a href="index.html" class="site-title-link">
                     <h1>
                         {{.Site.Title}}
                     </h1>
@@ -44,7 +46,6 @@
                 </div>
                 {{- end }}
             </div>
-            <br /><br />
             <div class="copyright-wrapper">
                 <span class="copyright">Copyright &copy; {{.Site.CopyrightYear}}</span>
             </div>

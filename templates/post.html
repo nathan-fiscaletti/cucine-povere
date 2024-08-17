@@ -9,10 +9,12 @@
     <body class="body">
         <div class="container content">
             <div class="logo-wrapper">
-                <img alt="{{.Site.Title}}" src="./logo.png" class="rounded-circle site-logo" />
+                <a href="index.html" class="logo-link">
+                    <img alt="{{.Site.Title}}" src="./logo.png" class="rounded-circle site-logo" />
+                </a>
             </div>
-            <div class="page-header site-title">
-                <a href="index.html">
+            <div class="page-header">
+                <a href="index.html" class="site-title-link">
                     <h1>
                         {{.Site.Title}}
                     </h1>
@@ -59,7 +61,7 @@
             <div class="row more-posts-wrapper">
                 <div class="col-md-6">
                     {{- if .Previous }}
-                    <div class="post-preview" onClick="window.location.href = '{{.Previous.Url}}'">
+                    <div class="post-preview post-preview-no-top-margin" onClick="window.location.href = '{{.Previous.Url}}'">
                         <h2 class="post-preview-title">
                             <a href="{{.Previous.Url}}">{{.Previous.Title}}</a>
                         </h2>
@@ -75,7 +77,7 @@
                 </div>
                 <div class="col-md-6">
                     {{- if .Next }}
-                    <div class="post-preview" onClick="window.location.href = '{{.Next.Url}}'">
+                    <div class="post-preview post-preview-no-top-margin" onClick="window.location.href = '{{.Next.Url}}'">
                         <h2 class="post-preview-title">
                             <a href="{{.Next.Url}}">{{.Next.Title}}</a>
                         </h2>
