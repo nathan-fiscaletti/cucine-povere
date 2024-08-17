@@ -1,6 +1,7 @@
 !!title Chicken & Bacon Linguine Alfredo
 !!tags pasta,linguine,chicken,bacon,comfort food
 !!image chicken-linguine.jpg
+!!date August 16, 2024
 
 > This recipe for Chicken & Bacon Linguine Alfredo is a Comforting, Flavorful Twist on a Classic Pasta Dish. It's a great way to use up leftover chicken and bacon, and it's perfect for a quick and easy weeknight meal.
 

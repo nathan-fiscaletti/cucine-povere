@@ -1,6 +1,7 @@
 !!title Ground Beef & Tomato Mostaccioli
 !!tags pasta,mostaccioli,ground beef,comfort food
 !!image beef-and-tomato-mostaccioli.jpg
+!!date August 15, 2024
 
 > This recipe for Ground Beef & Tomato Mostaccioli is a Classic, Hearty Pasta Dish That's Perfect for Feeding a Hungry Crowd. It's a great way to use up leftover ground beef and tomatoes, and it's perfect for a quick and easy weeknight meal.
 

@@ -319,11 +319,13 @@ pre {
 
 .post-text img {
     max-width: 100%;
-    height: auto;
+    display: block;
+    height: 350px;
     width: 100%;
     object-fit: cover;
     border-radius: 16px;
-    margin-bottom: 16px;
+    margin-bottom: 32px;
+    margin-top: 32px;
 }
 
 .main-image {

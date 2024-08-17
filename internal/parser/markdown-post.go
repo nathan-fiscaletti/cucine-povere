@@ -7,6 +7,7 @@ import (
 	"path"
 	"regexp"
 	"strings"
+	"time"
 
 	md "github.com/gomarkdown/markdown"
 	mdparser "github.com/gomarkdown/markdown/parser"
@@ -21,6 +22,11 @@ type metaDataParser func(post *datatypes.Post, val string) error
 var metaDataParsers map[string]metaDataParser = map[string]metaDataParser{
 	"title": func(post *datatypes.Post, val string) error {
 		post.Title = val
+		return nil
+	},
+
+	"date": func(post *datatypes.Post, val string) error {
+		post.Date = val
 		return nil
 	},
 
@@ -148,36 +154,43 @@ type markdownPosts struct {
 func (p *markdownPosts) Posts(main datatypes.Main) ([]datatypes.PostPage, error) {
 	out := []datatypes.PostPage{}
 
-	for idx, post := range p.posts {
-		var nextPost *datatypes.Post
-		var previousPost *datatypes.Post
-
-		if idx > 0 {
-			prev, err := p.posts[idx-1].Read(main)
-			if err != nil {
-				return nil, err
-			}
-
-			previousPost = &prev
-		}
-
-		if idx < len(p.posts)-1 {
-			next, err := p.posts[idx+1].Read(main)
-			if err != nil {
-				return nil, err
-			}
-
-			nextPost = &next
-		}
-
+	posts := []datatypes.Post{}
+	for _, post := range p.posts {
 		parsedPost, err := post.Read(main)
 		if err != nil {
 			return nil, err
 		}
 
+		posts = append(posts, parsedPost)
+	}
+
+	// Sort the posts by date
+	for i := 0; i < len(posts); i++ {
+		for j := i + 1; j < len(posts); j++ {
+			iDate, _ := time.Parse(main.Site.DateFormat, posts[i].Date)
+			jDate, _ := time.Parse(main.Site.DateFormat, posts[j].Date)
+
+			if iDate.Before(jDate) {
+				posts[i], posts[j] = posts[j], posts[i]
+			}
+		}
+	}
+
+	for idx, post := range posts {
+		var nextPost *datatypes.Post
+		var previousPost *datatypes.Post
+
+		if idx > 0 {
+			previousPost = &posts[idx-1]
+		}
+
+		if idx < len(p.posts)-1 {
+			nextPost = &posts[idx+1]
+		}
+
 		out = append(out, datatypes.PostPage{
 			Site:     main.Site,
-			Post:     parsedPost,
+			Post:     post,
 			Next:     nextPost,
 			Previous: previousPost,
 		})
