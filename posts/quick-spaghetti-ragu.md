@@ -1,5 +1,5 @@
 !!title Quick Spaghetti Ragu
-!!tags pasta,spaghetti,beef,comfort food
+!!tags pasta,spaghetti,ground beef,comfort food
 !!image quick-spaghetti-ragu.jpg
 !!date August 17, 2024
 
