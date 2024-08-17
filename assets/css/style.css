@@ -202,6 +202,12 @@ pre {
     margin-bottom: 16px;
 }
 
+@media only screen and (max-width: 768px) {
+    .post-preview-badges {
+        line-height: 34px;
+    }
+}
+
 .post-preview-date {
     margin-bottom: 8px;
     font-size: 14px;
